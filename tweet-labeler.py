@@ -14,10 +14,10 @@ def save_result(obj):
 
 def login():
     print("Logging in...")
-    consumer_key = ""
-    consumer_secret = ""
-    access_token = ""
-    access_token_secret = ""
+    consumer_key = "V80gpONO6afT0WTD6jJmL0JJE"
+    consumer_secret = "ITvvYILOOqYN9Pr5iROCl7Iz1PvLBEYr2vYwuyVQjCgyPIwnCK"
+    access_token = "98342662-cPlvAxAfJopG09yVXO7UYMX1uhKWJj5KlcHwiveT4"
+    access_token_secret = "GJzJr4JlxcljxsjcFRn7tm1ZvYUkWv59GZQiSGqMDAdLq"
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -102,7 +102,8 @@ def main():
                 continue
             save_result(result)
             state = 'start'
-
+	else:
+            state = input(">>> ")
         
 
 if __name__ == "__main__":
